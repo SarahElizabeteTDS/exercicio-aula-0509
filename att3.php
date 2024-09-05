@@ -73,6 +73,7 @@ do
     {
     case 0:
         print "\nPrograma encerrado!\n";
+        system("clear");
     break;
 
     case 1:
@@ -83,22 +84,27 @@ do
         }else{
             print "Não há estoque suficiente.\n";
         }
+        system("clear");
     break;
 
     case 2:
         $posto->reporEstoque(readline("Informe a quantidade de litros que você irá repor: "));
         print "Estoque reposto com sucesso.";
+        system("clear");
     break;
 
     case 3:
-        $inx;
-        foreach ($abastecimentosGasolina as $abastecimentos) 
+        $inx = 1;
+        foreach($posto->getAbastecimentosGasolina() as $abastecimentos) 
         {
             print "Abastecimento " . $inx . ": " . $abastecimentos . " litros.\n";
+            $inx++;
         }
+        system("clear");
     break;
 
     default:
         print "Opção inválida\n";
+        system("clear");
     }
 }while($escolha != 0);
