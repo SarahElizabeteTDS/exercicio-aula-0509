@@ -67,14 +67,12 @@ for ($i=0; $i < 4; $i++)
 }
 
 $area = 0;
-$maiorArea = new Trapezio();
 $trapezioMaiorArea = new Trapezio();
 //verificacao para imprimir
 for ($i=0; $i < count($trapezios); $i++) 
 { 
     if ($trapezio[$i]->getArea() > $area) 
     {
-       $maiorArea = $trapezio[$i]->getArea();
        $area = $trapezio[$i]->getArea();
        $trapezioMaiorArea = $trapezio[$i];
     }
